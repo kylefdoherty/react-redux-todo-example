@@ -16,15 +16,6 @@ describe('AddTodo', () => {
 
     expect(placeholder).to.equal('Add Todo');
   })
-
-  // it('clears the input after the todo is added', () => {
-  //   const wrapper = shallow(<AddTodo />);
-  //   const input = wrapper.find('input')
-
-  //   input.simulate('keyDown', {value: 'Get milk', key: 'Enter'});
-
-  //   expect(wrapper.find('input')).to.have.value('');
-  // })
 })
 
 

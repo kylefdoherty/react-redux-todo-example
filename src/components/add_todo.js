@@ -2,7 +2,8 @@ import React from 'react';
 
 const AddTodo = (props) => {
   return(
-    <input type='text'
+    <input onKeyDown={ props.handleKeyDown }
+           type='text'
            name='add-todo'
            placeholder='Add Todo' />
   )
