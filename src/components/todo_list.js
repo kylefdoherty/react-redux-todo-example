@@ -6,7 +6,9 @@ const TodoList = (props) => {
     return(
       <Todo key={ todo.id }
             text={ todo.text }
-            completed={ todo.completed } />
+            id={ todo.id }
+            completed={ todo.completed }
+            completeTodo={ props.completeTodo } />
     )
   })
 
