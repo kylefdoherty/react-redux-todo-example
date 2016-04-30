@@ -20,7 +20,7 @@ module.exports = {
     'cheerio': 'window',
     'react/lib/ExecutionEnvironment': true,
     'react/lib/ReactContext': true,
-  }
+  },
   module: {
     loaders: [{
       test: /\.js$/,
