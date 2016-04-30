@@ -2,10 +2,13 @@ import React from 'react';
 
 const AddTodo = (props) => {
   return(
-    <input onKeyDown={ props.handleKeyDown }
-           type='text'
-           name='add-todo'
-           placeholder='Add Todo' />
+    <form onSubmit={ props.handleSubmit } >
+      <input onChange={ props.handleChange }
+             value={ props.text }
+             type='text'
+             name='add-todo'
+             placeholder='Add Todo' />
+    </form>
   )
 }
 
