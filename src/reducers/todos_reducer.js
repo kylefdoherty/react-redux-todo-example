@@ -1,15 +1,18 @@
-const DefaultTodos = [
-  {
-    text: 'Feed dog',
-    completed: false,
-    id: 1
-  },
-  {
-    text: 'Walk dog',
-    completed: false,
-    id: 2
-  }
-]
+const DefaultState = {
+  displayFilter: 'ALL_TODOS',
+  todosList: [
+    {
+      text: 'Feed dog',
+      completed: false,
+      id: 1
+    },
+    {
+      text: 'Walk dog',
+      completed: false,
+      id: 2
+    }
+  ]
+}
 
 const CompleteTodo = (todos, todoId) => {
   return todos.map((todo) => {
@@ -20,7 +23,7 @@ const CompleteTodo = (todos, todoId) => {
   })
 }
 
-const Todos = (state = DefaultTodos, action = {}) => {
+const Todos = (state = DefaultState, action = {}) => {
   switch (action.type) {
     case 'ADD_TODO':
      let nextId = state.length + 1

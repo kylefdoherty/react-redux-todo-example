@@ -6,6 +6,7 @@ import TodoList from '../components/todo_list';
 
 class TodoListContainer extends Component {
   render() {
+    console.log(this.props)
     return(
      <TodoList todos={ this.props.todos }
                completeTodo={ this.props.completeTodo } />
@@ -14,8 +15,11 @@ class TodoListContainer extends Component {
 }
 
 const mapStateToProps = (state) => {
+  let { todosList, displayFilter} = state.todos;
+
   return {
-    todos: state.todos.filter(t => !t.completed)
+    displayFilter: displayFilter,
+    todos: todosList.filter(t => !t.completed)
   }
 }
 
